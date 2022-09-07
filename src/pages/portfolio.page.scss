@@ -1,7 +1,11 @@
 $title-font: 'Libre Baskerville', serif;
-$title-h1-size: 72px;
 $text-font: 'Montserrat', sans-serif;
-
+$title-h1-size: 72px;
+$title-h2-size: 48px;
+$title-h3-size: 24px;
+$text-in-header-size: 24px;
+$text-in-content-size: 16px;
+$text-in-content-color: #707070;
 .portfolio {
     margin: 0;
     padding: 0;
@@ -39,8 +43,74 @@ $text-font: 'Montserrat', sans-serif;
                 margin-bottom: 16px;
             }
             p {
-                font-size: 24px;
+                font-size: $text-in-header-size;
                 margin: 0;
+            }
+        }
+    }
+    .portfolio-content {
+        margin: 0 auto;
+        width: 1030px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .portfolio-about-me {
+            width: 100%;
+            margin: 0 auto;
+            h2 {
+                font-family: $title-font;
+                font-size: $title-h2-size;
+                margin: 0 0 10px;
+            }
+            div {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                    width: 480px;
+                    font-size: $text-in-content-size;
+                    font-family: $text-font;
+                    color: $text-in-content-color;
+                }
+            }
+        }
+        .portfolio-about-me-img {
+            width: 1500px;
+        }
+        .portfolio-what-i-do {
+            width: 100%;
+            .what-i-do-title {
+                margin: 0 0 40px;
+                width: 520px;
+                h2 {
+                    font-family: $title-font;
+                    font-size: $title-h2-size;
+                    margin: 60px 0 10px;
+                }
+                p {
+                    font-family: $text-font;
+                    font-size: $text-in-content-size;
+                    color: $text-in-content-color;
+                }
+            }
+            .what-i-do-skills {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                div {
+                    width: 300px;
+                    h3 {
+                        font-family: $title-font;
+                        font-size: $title-h3-size;
+                    }
+                    p {
+                        font-family: $text-font;
+                        font-size: $text-in-content-size;
+                        color: $text-in-content-color;
+                    }
+                }
             }
         }
     }

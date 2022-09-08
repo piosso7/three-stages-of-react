@@ -7,6 +7,10 @@ import aboutMeImg from '../img/portfolio-content-about-me.png';
 import skillOne from '../img/portfolio-skill-1.png';
 import skillTwo from '../img/portfolio-skill-2.png';
 import skillThree from '../img/portfolio-skill-3.png';
+import workOne from '../img/portfolio-work-1.png';
+import workTwo from '../img/portfolio-work-2.png';
+import workThree from '../img/portfolio-work-3.png';
+import workFour from '../img/portfolio-work-4.png';
 
 const PortfolioPage = () => {
     return (
@@ -82,7 +86,54 @@ const PortfolioPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className="portfolio-my-work"></section>
+                <section className="portfolio-my-work">
+                    <div className="my-work-title">
+                        <h2>My Work</h2>
+                        <p>
+                            I present to you some of my recent work, more works can be found in my
+                            profile on behanсe
+                        </p>
+                    </div>
+                    <div className="my-work-gallery">
+                        <div className="firstColumn">
+                            <div>
+                                <img src={workOne} />
+                                <h3>Corporate.</h3>
+                                <p>
+                                    Complete redesign of the site travel company. The main
+                                    requirement was to get a stylish and comfortable design.
+                                </p>
+                            </div>
+                            <div>
+                                <img src={workTwo} />
+                                <h3>Agency.</h3>
+                                <p>
+                                    We have created a new product that will help designers,
+                                    developers and companies create websites.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="secondColumn">
+                            <div>
+                                <img src={workThree} />
+                                <h3>Knigiws.</h3>
+                                <p>
+                                    Recently the library in electronic formats were the prerogative
+                                    of the state agencies.
+                                </p>
+                            </div>
+                            <div>
+                                <img src={workFour} />
+                                <h3>One Story.</h3>
+                                <p>
+                                    An excellent choice for freelancers, photographers, startups,
+                                    personal portfolios, blogs and landing pages.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>More work</button>
+                </section>
                 <section className="portfolio-photography"></section>
                 <section className="portfolio-contact"></section>
             </div>

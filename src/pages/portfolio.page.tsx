@@ -11,6 +11,9 @@ import workOne from '../img/portfolio-work-1.png';
 import workTwo from '../img/portfolio-work-2.png';
 import workThree from '../img/portfolio-work-3.png';
 import workFour from '../img/portfolio-work-4.png';
+import photoOne from '../img/portfolio-photo1.png';
+import photoTwo from '../img/portfolio-photo2.png';
+import photoThree from '../img/portfolio-photo3.png';
 
 const PortfolioPage = () => {
     return (
@@ -134,8 +137,41 @@ const PortfolioPage = () => {
                     </div>
                     <button>More work</button>
                 </section>
-                <section className="portfolio-photography"></section>
-                <section className="portfolio-contact"></section>
+                <section className="portfolio-photography">
+                    <div className="photography-title">
+                        <h2>Photography</h2>
+                        <p>
+                            In my life there is a place for photos. I love to share experiences and
+                            beautiful moments of your life with others.
+                        </p>
+                    </div>
+                    <div className="photography-gallery">
+                        <img src={photoOne} />
+                        <img src={photoTwo} />
+                        <img src={photoThree} />
+                    </div>
+                    <button>More photo</button>
+                </section>
+                <section className="portfolio-contact">
+                    <div className="contact-title">
+                        <h2>Say Hello</h2>
+                        <p>
+                            If you are interested in my services and would like additional
+                            information, feel free to email me.
+                        </p>
+                    </div>
+                    <form>
+                        <input className="input-name" type="text" placeholder="Name" />
+                        <input className="input-email" type="email" placeholder="Email" />
+                        <input className="input-subject" type="text" placeholder="Subject" />
+                        <textarea></textarea>
+                    </form>
+                    <button>To send</button>
+                </section>
+            </div>
+            <div className="portfolio-footer">
+                <p>Made With Love</p>
+                <p>©2016 All rights reserved</p>
             </div>
         </div>
     );

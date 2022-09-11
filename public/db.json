@@ -3,72 +3,72 @@
     {
       "id": 1,
       "product_name": "Spic And Span All Purpose",
-      "price": "$8.39",
+      "price": "8.39",
       "discontinued": false,
-      "units": 37
+      "units": "37"
     },
     {
       "id": 2,
       "product_name": "Coffee - Egg Nog Capuccino",
-      "price": "$10.60",
+      "price": "10.60",
       "discontinued": true,
-      "units": 35
+      "units": "35"
     },
     {
       "id": 3,
       "product_name": "Yokaline",
-      "price": "$11.25",
+      "price": "11.25",
       "discontinued": false,
-      "units": 18
+      "units": "18"
     },
     {
       "id": 4,
       "product_name": "Fireball Whisky",
-      "price": "$17.53",
+      "price": "17.53",
       "discontinued": true,
-      "units": 96
+      "units": "96"
     },
     {
       "id": 5,
       "product_name": "Spice - Paprika",
-      "price": "$7.50",
+      "price": "7.50",
       "discontinued": false,
-      "units": 12
+      "units": "12"
     },
     {
       "id": 6,
       "product_name": "Sea Bass - Whole",
-      "price": "$17.67",
+      "price": "17.67",
       "discontinued": false,
-      "units": 4
+      "units": "4"
     },
     {
       "id": 7,
       "product_name": "Wine - Chateau Timberlay",
-      "price": "$10.71",
+      "price": "10.71",
       "discontinued": false,
-      "units": 49
+      "units": "49"
     },
     {
       "id": 8,
       "product_name": "Pork Loin Cutlets",
-      "price": "$10.66",
+      "price": "10.66",
       "discontinued": false,
-      "units": 76
+      "units": "76"
     },
     {
       "id": 9,
       "product_name": "Pear - Packum",
-      "price": "$18.67",
+      "price": "18.67",
       "discontinued": false,
-      "units": 59
+      "units": "59"
     },
     {
       "id": 10,
       "product_name": "Beef - Bresaola",
-      "price": "$11.70",
+      "price": "11.70",
       "discontinued": true,
-      "units": 44
+      "units": "44"
     }
   ]
 }

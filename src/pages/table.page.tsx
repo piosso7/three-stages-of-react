@@ -129,6 +129,47 @@ function TablePage() {
         clearValue();
     }
 
+    // EDIT PRODUCT MODAL
+
+    const [editModalIsOpen, setEditIsOpen] = React.useState(false);
+
+    function openEditModal(id: string) {
+        axios
+            .get<IProduct>(`http://localhost:3000/data/${id}`)
+            .then((response) => {
+                setId(id);
+                setName(response.data.product_name);
+                setPrice(response.data.price);
+                setDiscontinued(response.data.discontinued);
+                setUnits(response.data.units);
+                setEditIsOpen(true);
+            })
+            .catch(function (error: string) {
+                console.log(error);
+            });
+    }
+
+    const handleEditSubmit = async () => {
+        axios
+            .patch(`http://localhost:3000/data/${productId}`, {
+                product_name: name,
+                price: price,
+                discontinued: discontinued,
+                units: units,
+            })
+            .then(function () {
+                closeEditModal();
+            })
+            .catch(function (error: string) {
+                console.log(error);
+            });
+    };
+
+    function closeEditModal() {
+        setEditIsOpen(false);
+        clearValue();
+    }
+
     return (
         <div>
             <tbody className="tbody">
@@ -149,7 +190,9 @@ function TablePage() {
                         <td>{product.discontinued + ''}</td>
                         <td>{product.units}</td>
                         <td>
-                            <button className="editBtn">Edit</button>
+                            <button className="editBtn" onClick={() => openEditModal(product.id)}>
+                                Edit
+                            </button>
                             <button
                                 className="deleteBtn"
                                 onClick={() => {
@@ -222,6 +265,57 @@ function TablePage() {
                             </form>
                             <button onClick={handleAddSubmit}>Submit</button>
                             <button onClick={closeAddModal}>Close</button>
+                        </Modal>
+
+                        {/* EDIT MODAL */}
+
+                        <Modal
+                            ariaHideApp={false}
+                            isOpen={editModalIsOpen}
+                            onRequestClose={closeEditModal}
+                            style={productModalStyle}>
+                            <h2>Edit product</h2>
+                            <form>
+                                <input
+                                    className="modalInput modalInputName"
+                                    id=""
+                                    type="text"
+                                    placeholder="Product name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                                <input
+                                    className="modalInput modalInputPrice"
+                                    type="number"
+                                    placeholder="Price"
+                                    value={price}
+                                    onChange={(e) => setPrice(e.target.value)}
+                                />
+                                <select
+                                    className="modalSelect"
+                                    value={discontinued}
+                                    defaultValue={product.discontinued}
+                                    onChange={(e) => {
+                                        setChoice(e.target.value);
+                                        setDiscontinued(e.target.value);
+                                    }}>
+                                    <option value={'Not selected!'}>Is discontinued?</option>
+                                    <option value={'true'}>true</option>
+                                    <option value={'false'}>false</option>
+                                </select>
+
+                                <input
+                                    className="modalInput modalInputUnits"
+                                    type="number"
+                                    placeholder="Units"
+                                    value={units}
+                                    onChange={(e) => {
+                                        setUnits(e.target.value);
+                                    }}
+                                />
+                            </form>
+                            <button onClick={handleEditSubmit}>Submit</button>
+                            <button onClick={closeEditModal}>Close</button>
                         </Modal>
                     </tr>
                 ))}

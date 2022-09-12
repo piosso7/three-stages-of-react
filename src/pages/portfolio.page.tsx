@@ -164,7 +164,7 @@ const PortfolioPage = () => {
                         <input className="input-name" type="text" placeholder="Name" />
                         <input className="input-email" type="email" placeholder="Email" />
                         <input className="input-subject" type="text" placeholder="Subject" />
-                        <textarea></textarea>
+                        <textarea placeholder="Message"></textarea>
                     </form>
                     <button>To send</button>
                 </section>

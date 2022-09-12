@@ -1,0 +1,68 @@
+.tabele {
+    background-color: #fafafa;
+    tbody {
+        display: table;
+        width: 100%;
+    }
+    th,
+    td {
+        font-size: 16px;
+        border: 1px solid #eaeaea;
+        padding: 10px;
+        button {
+            margin: 0 5px;
+            padding: 5px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .editBtn {
+            background-color: #eb6c5e;
+            color: white;
+            border: #eb6c5e;
+            border-radius: 4px;
+        }
+    }
+    th {
+        width: 20%;
+    }
+    .product:nth-child(odd) {
+        background: #fff;
+    }
+    .addBtn {
+        margin: 10px 10px;
+        padding: 5px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+
+/* MODALS */
+form {
+    .modalInput,
+    .modalSelect {
+        font-size: 16px;
+        margin: 10px 5px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+    .modalInputName {
+        width: 50%;
+    }
+    .modalInputPrice {
+        width: 10%;
+    }
+
+    .modalSelect {
+        width: 20%;
+    }
+    .modalInputUnits {
+        width: 10%;
+    }
+}
+.modalButton {
+    margin: 10px 10px;
+    padding: 5px;
+    height: 30px;
+    cursor: pointer;
+}

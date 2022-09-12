@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './home.page.scss';
+import './tabele.page.scss';
 import axios from 'axios';
 import Modal from 'react-modal';
 
@@ -171,7 +172,7 @@ function TablePage() {
     }
 
     return (
-        <div>
+        <div className="tabele">
             <tbody className="tbody">
                 <button className="addBtn" onClick={openAddModal}>
                     Add New
@@ -210,12 +211,15 @@ function TablePage() {
                             style={productModalStyle}>
                             <h2>Are you sure you want to delete?</h2>
                             <button
+                                className="modalButton"
                                 onClick={() => {
                                     deleteProduct(productId);
                                 }}>
                                 Yes
                             </button>
-                            <button onClick={closeDeleteModal}>No</button>
+                            <button className="modalButton" onClick={closeDeleteModal}>
+                                No
+                            </button>
                         </Modal>
 
                         {/* ADD MODAL */}
@@ -263,8 +267,12 @@ function TablePage() {
                                     }}
                                 />
                             </form>
-                            <button onClick={handleAddSubmit}>Submit</button>
-                            <button onClick={closeAddModal}>Close</button>
+                            <button className="modalButton" onClick={handleAddSubmit}>
+                                Submit
+                            </button>
+                            <button className="modalButton" onClick={closeAddModal}>
+                                Close
+                            </button>
                         </Modal>
 
                         {/* EDIT MODAL */}
@@ -314,8 +322,12 @@ function TablePage() {
                                     }}
                                 />
                             </form>
-                            <button onClick={handleEditSubmit}>Submit</button>
-                            <button onClick={closeEditModal}>Close</button>
+                            <button className="modalButton" onClick={handleEditSubmit}>
+                                Submit
+                            </button>
+                            <button className="modalButton" onClick={closeEditModal}>
+                                Close
+                            </button>
                         </Modal>
                     </tr>
                 ))}

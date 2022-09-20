@@ -10,7 +10,7 @@ const NewNotePage = () => {
     const saveStickynote = (note: IStickyNote) => dispatch(addStickynote(note));
 
     return (
-        <div>
+        <div className="new-note-page">
             <h1>Add new sticky note:</h1>
             <AddStickynote saveStickynote={saveStickynote} note={undefined} />
         </div>

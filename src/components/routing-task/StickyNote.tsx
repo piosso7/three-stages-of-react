@@ -8,11 +8,11 @@ interface INoteComponent {
 
 const Stickynote = ({note, removeNote}: INoteComponent) => {
     return (
-        <div>
+        <div className="sticky-note">
             <div>
                 <p>{note.text}</p>
             </div>
-            <button onClick={() => removeNote(note)}>Usuń</button>
+            <button onClick={() => removeNote(note)}>Delete</button>
         </div>
     );
 };

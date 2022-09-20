@@ -1,0 +1,69 @@
+.routing-container {
+    display: flex;
+    flex-direction: column;
+    .routing-buttons {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        button {
+            height: 30px;
+            margin: 10px;
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+    .new-note-page {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        .add-sticky-note {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            input {
+                font-size: 16px;
+                width: 100%;
+                margin: 10px;
+            }
+            button {
+                height: 30px;
+                margin: 10px;
+                background: #fff;
+                border: 2px solid #000;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:disabled {
+                border: 2px solid #9b9b9b;
+            }
+        }
+    }
+    .notes-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        .sticky-note {
+            margin-top: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 30%;
+            align-items: center;
+            background-color: #fffd98;
+            border-radius: 10px;
+        }
+        button {
+            height: 30px;
+            margin: 10px;
+            background: #ff9696;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

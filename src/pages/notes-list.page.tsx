@@ -15,7 +15,7 @@ const StickyNotesList = () => {
     const deleteNote = (note: IStickyNote) => dispatch(removeNote(note));
 
     return notes.length ? (
-        <ul>
+        <ul className="notes-list">
             {notes.map((note: IStickyNote) => (
                 <StickyNote key={note.id} note={note} removeNote={deleteNote} />
             ))}

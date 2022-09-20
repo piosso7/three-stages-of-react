@@ -1,5 +1,6 @@
 import {IStickyNote} from '@shared/interfaces/stickynote.interface';
 import * as React from 'react';
+import '@pages/routing-task.page.scss';
 
 interface IStickyNoteSave {
     note: IStickyNote | any;
@@ -25,7 +26,7 @@ const AddStickynote = ({saveStickynote}: IStickyNoteSave) => {
     };
 
     return (
-        <form onSubmit={addNewStickyNnote}>
+        <form className="add-sticky-note" onSubmit={addNewStickyNnote}>
             <input
                 value={note?.text}
                 id="text"
